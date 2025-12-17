@@ -80,3 +80,11 @@ function getUniqueValues(arr1: number[], arr2: number[]): number[] {
     });
     return newArray;
 }
+
+function calculateTotalPrice(products: { price: number, quantity: number }[]): number {
+    let total = 0;
+    products.map((item) => {
+        total += item.price * item.quantity;
+    });
+    return total;
+}
